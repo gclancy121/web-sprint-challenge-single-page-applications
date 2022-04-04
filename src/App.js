@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import './App.css';
 import {Link, Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
@@ -9,15 +9,16 @@ import Form from './components/Form';
 //this sets up the updating of the form in real time
 const initialNameValue = '';
 
-
 const App = () => {
   
 const [nameValue, setNameValue] = useState(initialNameValue);
 
-const onChange = evt => {
-  const value = evt.target;
-  setNameValue(value)
+const updateName = (name, inputValue) => {
+  setNameValue(inputValue);
 }
+
+
+
 
   return (
     <>
@@ -35,7 +36,10 @@ const onChange = evt => {
       // this sets up the webpage in a way that works, if you add more at it to the top otherwise everything burns
     <Switch>
       <Route path ='/pizza'>
-        <Form />
+        <Form 
+        value={nameValue}
+        update={updateName}
+        />
       </Route>
       <Route path ='/'>
           <Home />

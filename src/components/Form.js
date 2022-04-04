@@ -5,9 +5,10 @@ import React from 'react';
 function Form(props) {
 const { value, update } = props;
 const onChange = evt => {
-    const name = evt.target.name;
+    const name = (evt.target.name);
     const {value} = evt.target;
-    update(name,value);
+    update(name, value);
+    
 }
 
 
