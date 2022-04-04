@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom';
 function Home() {
     const history = useHistory();
     const routeToPizza = () => {
-        history.push('/pizza-form');
+        history.push('/pizza');
     }
 
     return (
