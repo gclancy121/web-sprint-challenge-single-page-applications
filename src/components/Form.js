@@ -14,15 +14,16 @@ const onChange = evt => {
     update(name, valueToUse)
 }
 
+console.log(values.name);
 
 
 
 return (
     <form onSubmit={onSubmit} id="pizza-form">
+         <div className='errors'>
+         <p>{errors.name}</p>
+         </div>
         <div id='name-input'>
-            <div className='errors'>
-           <p>{errors.name}</p>
-            </div>
             <label>Name For Order
                 <input
                 type='text'
@@ -30,7 +31,6 @@ return (
                 onChange={onChange}
                 value={values.name}
                 placeholder='Type your name here'
-                minLength='2'
                 />
 
             </label>
