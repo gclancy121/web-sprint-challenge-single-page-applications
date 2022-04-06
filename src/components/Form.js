@@ -14,7 +14,6 @@ const onChange = evt => {
     update(name, valueToUse)
 }
 
-console.log(values.name);
 
 
 
@@ -23,22 +22,23 @@ return (
          <div className='errors'>
          <p>{errors.name}</p>
          </div>
-        <div id='name-input'>
+        <div >
             <label>Name For Order
                 <input
-                type='text'
-                name='name'
-                onChange={onChange}
-                value={values.name}
-                placeholder='Type your name here'
+                    id='name-input'
+                    type='text'
+                    name='name'
+                    onChange={onChange}
+                    value={values.name}
+                    placeholder='Type your name here'
                 />
 
             </label>
         </div>
-        <div id='size-dropdown'>
+        <div >
             <h2>Size</h2>
             <label>Choose your size
-                <select onChange={onChange} value={values.size} name='size'>
+                <select onChange={onChange} value={values.size} name='size' id='size-dropdown'>
                 <option value='small'>Small</option>
                 <option value='medium'>Medium</option>
                 <option value='large'>Large</option>
@@ -50,48 +50,49 @@ return (
             <h2>Toppings</h2>
             <label>Sausage
                 <input 
-                type='checkbox'
-                name='sausage'
-                onChange={onChange}
-                checked={values.sausage}
+                    type='checkbox'
+                    name='sausage'
+                    onChange={onChange}
+                    checked={values.sausage}
                 />
             </label>
             <label>Pepperoni
                 <input 
-                type='checkbox'
-                name='pepperoni'
-                onChange={onChange}
-                checked={values.pepperoni}
+                    type='checkbox'
+                    name='pepperoni'
+                    onChange={onChange}
+                    checked={values.pepperoni}
                 />
             </label>
             <label>Ham
                 <input 
-                type='checkbox'
-                name='ham'
-                onChange={onChange}
-                checked={values.ham}    
+                    type='checkbox'
+                    name='ham'
+                    onChange={onChange}
+                    checked={values.ham}    
                 />
             </label>
             <label>Bacon
                 <input
-                type='checkbox'
-                name='bacon'
-                onChange={onChange}
-                checked={values.bacon}
+                    type='checkbox'
+                    name='bacon'
+                    onChange={onChange}
+                    checked={values.bacon}
                 />
             </label>
         </div>
-        <div id='special-text'>
+        <div >
             <input 
-            type='text'
-            name='specialText'
-            value={values.specialText}
-            onChange={onChange}
-            placeholder='Special instructions here'
+                id='special-text'
+                type='text'
+                name='specialText'
+                value={values.specialText}
+                onChange={onChange}
+                placeholder='Special instructions here'
             />
         </div>
         <div>
-            <input type='submit' />
+            <input type='submit' id='order-button'/>
         </div>
     </form>
 )}

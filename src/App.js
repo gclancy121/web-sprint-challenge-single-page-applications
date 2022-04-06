@@ -60,6 +60,7 @@ const formSubmit = () => {
     specialtext: formValues.specialText.trim(),
   }
   postPizza(newOrder);
+  console.log('success')
 }
 
 
